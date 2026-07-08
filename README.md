@@ -1,15 +1,31 @@
-# NESIA YouTube Publishing Standards
+# NESIA YouTube Standards
 
-Repo pre štandardizáciu YouTube publikovania pre NESIA. Aktuálny hlavný formát je **TALKSHOW**.
+Repo pre štandardizáciu YouTube práce pre NESIA. Aktuálny hlavný formát je **TALKSHOW**.
 
-> Stav tejto verzie: `v0.6.1-sync-descriptions-metadata`  
-> Dátum aktualizácie: 2026-06-15  
+> Stav tejto verzie: `v0.7.0-repo-rename-analytics-workflow`  
+> Dátum aktualizácie: 2026-07-08  
 > GitHub účet: `martin-evis`  
-> Oblasť: YouTube / obsah / štandardizácia
+> Oblasť: YouTube / obsah / publikovanie / analytika / benchmarking
+
+## Poznámka k premenovaniu repozitára
+
+Tento repozitár sa pôvodne volal:
+
+```text
+martin-evis/nesia-youtube-publishing-standards
+```
+
+Nový názov je:
+
+```text
+martin-evis/nesia-youtube-standards
+```
+
+Premenovanie bolo urobené preto, že repozitár už nepokrýva iba YouTube publishing, ale širší štandard práce s YouTube obsahom pre NESIA: publikačné balíky, metadáta, texty, performance poznámky, analytiku, benchmarking a opakovateľné workflowy pre NESIA Talkshow.
 
 ## Čo je cieľ repozitára
 
-Repo má byť praktický pracovný štandard pre nové NESIA videá. Pri novom videu má pomôcť pripraviť:
+Repo má byť praktický pracovný štandard pre nové aj existujúce NESIA videá. Pri novom alebo historickom videu má pomôcť pripraviť a udržiavať:
 
 1. 3–5 variantov nadpisu,
 2. odporúčaný finálny nadpis,
@@ -20,13 +36,17 @@ Repo má byť praktický pracovný štandard pre nové NESIA videá. Pri novom v
 7. playlist,
 8. thumbnail text a brief pre grafika,
 9. pripnutý komentár,
-10. interný kontrolný checklist pred publikovaním.
+10. interný kontrolný checklist pred publikovaním,
+11. bezpečný analytický report,
+12. benchmarking medzi jednotlivými videami alebo sériami.
 
 ## Zásadné pravidlo
 
-GitHub nie je archív videí. Do repozitára patria **texty, metadáta, pravidlá, šablóny, prompty, analýzy a výstupné balíky**.
+GitHub nie je archív videí. Do repozitára patria **texty, metadáta, pravidlá, šablóny, prompty, analýzy, public-safe performance poznámky a výstupné balíky**.
 
-Do repozitára nepatria veľké video súbory (`mp4`, `mov`, `mkv`) ani nečistené exporty z YouTube Studio. Pri verejnom repozitári sem nepatria ani interné dáta ako retencia, CTR, watch time, zdroje návštevnosti, rozpočty alebo neverejné kontakty.
+Do repozitára nepatria veľké video súbory (`mp4`, `mov`, `mkv`) ani nečistené exporty z YouTube Studio. Pri verejnom repozitári sem nepatria ani interné dáta ako detailná retencia, CTR, watch time, zdroje návštevnosti, rozpočty alebo neverejné kontakty.
+
+Ak sa pracuje s internými YouTube Analytics screenshotmi, do GitHubu sa ukladá iba očistený súhrn, metodika, šablóna alebo anonymizovaná interpretácia.
 
 ## Aktuálny rozsah
 
@@ -47,7 +67,7 @@ Detailné dáta sú v:
 content/talkshow/published/
 ```
 
-## Nová odporúčaná štruktúra
+## Odporúčaná štruktúra
 
 ```text
 .
@@ -58,7 +78,9 @@ content/talkshow/published/
 │   ├── 00-public-repo-mode.md
 │   ├── 06-content-data-model.md
 │   ├── 07-storage-policy.md
-│   └── 08-iteration-workflow.md
+│   ├── 08-iteration-workflow.md
+│   ├── 09-talkshow-video-analytics-workflow.md
+│   └── 10-talkshow-performance-benchmarking.md
 ├── content/
 │   └── talkshow/
 │       ├── README.md
@@ -81,7 +103,13 @@ content/talkshow/published/
 │       ├── metadata-rules-draft-v0.4.md
 │       └── thumbnail-rules-draft-v0.4.md
 ├── templates/
+│   └── talkshow/
+│       ├── new-video-brief-template.md
+│       └── video-analytics-report-template.md
 ├── prompts/
+│   └── talkshow/
+│       ├── create-youtube-pack-from-transcript.md
+│       └── analyze-youtube-analytics-screenshots.md
 ├── outputs/
 └── scripts/
 ```
@@ -94,6 +122,8 @@ content/talkshow/published/
 4. Výstup ulož do `outputs/talkshow/`.
 5. Po publikovaní doplň finálny záznam do `content/talkshow/published/`.
 6. Pri väčšej zmene aktualizuj `CHANGELOG.md`.
+7. Pri vyhodnocovaní videa použi `docs/09-talkshow-video-analytics-workflow.md` a šablónu `templates/talkshow/video-analytics-report-template.md`.
+8. Pri porovnávaní viacerých videí použi `docs/10-talkshow-performance-benchmarking.md`.
 
 ## Aktuálne otvorené položky
 
@@ -102,3 +132,4 @@ content/talkshow/published/
 - Doplniť bezpečný public výkon pre video `LU2foQMJVsg`.
 - Overiť presný dátum publikovania videa `wnlNvGYrnhw`.
 - Skontrolovať hashtag `#matejsucha` pri videu `wnlNvGYrnhw`, keďže bol ponechaný podľa dodaného pôvodného popisu.
+- Pri ďalších Talkshow dieloch dopĺňať bezpečné performance poznámky a benchmarking bez interných exportov.
