@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.7.0-repo-rename-analytics-workflow – 2026-07-08
+
+### Zmenené
+
+- Repozitár bol premenovaný z `martin-evis/nesia-youtube-publishing-standards` na `martin-evis/nesia-youtube-standards`.
+- README bol upravený tak, aby pokrýval širší rozsah: YouTube publikovanie, metadáta, analytiku, benchmarking a opakovateľné workflowy pre NESIA Talkshow.
+- Dopĺňa sa explicitná poznámka, že starý názov bol zúžený na publishing, zatiaľ čo nový názov lepšie vystihuje širší účel repozitára.
+
+### Pridané
+
+- `docs/09-talkshow-video-analytics-workflow.md` – workflow pre bezpečnú analýzu videí z YouTube Analytics podkladov.
+- `docs/10-talkshow-performance-benchmarking.md` – pravidlá porovnávania výkonu Talkshow videí.
+- `templates/talkshow/video-analytics-report-template.md` – šablóna analytického reportu.
+- `prompts/talkshow/analyze-youtube-analytics-screenshots.md` – prompt pre spracovanie screenshotov z YouTube Analytics.
+
+### Poznámka
+
+Repo je public. Detailné interné YouTube Studio exporty, screenshoty, rozpočty a citlivé analytické dáta zostávajú mimo GitHub. Do repozitára patria iba očistené súhrny, metodika, šablóny, prompty a public-safe poznámky.
+
 ## v0.6.1-sync-descriptions-metadata – 2026-06-15
 
 ### Opravené / zosúladené
